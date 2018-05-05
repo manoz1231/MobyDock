@@ -1,11 +1,11 @@
 FROM python:2.7-slim
 MAINTAINER Nick Janetakis <nick.janetakis@gmail.com>
+RUN mkdir -p /usr/share/man/man1
 
 RUN apt-get update && apt-get install -qq -y build-essential libpq-dev postgresql-client-9.4 --fix-missing --no-install-recommends
 
 ENV INSTALL_PATH /mobydock
 RUN mkdir -p $INSTALL_PATH
-RUN mkdir -p /usr/share/man/man1
 
 WORKDIR $INSTALL_PATH
 
