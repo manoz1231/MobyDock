@@ -5,6 +5,7 @@ RUN apt-get update && apt-get install -qq -y build-essential libpq-dev postgresq
 
 ENV INSTALL_PATH /mobydock
 RUN mkdir -p $INSTALL_PATH
+RUN mkdir -p /usr/share/man/man1
 
 WORKDIR $INSTALL_PATH
 
